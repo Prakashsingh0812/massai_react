@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Component</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- React and ReactDOM -->
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+    <!-- Your custom script -->
+    <script type="text/javascript">
+        // Create a simple React component
+        function Greeting(props) {
+            return React.createElement('h1', null, `Hello, ${props.name}!`);
+        }
+
+        // Render the React component to the DOM
+        ReactDOM.render(React.createElement(Greeting, { name: 'World' }), document.getElementById('root'));
+    </script>
+</body>
+</html>
